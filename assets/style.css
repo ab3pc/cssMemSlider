@@ -56,6 +56,7 @@
 .slider__footer {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .slider__text {
@@ -149,4 +150,15 @@ label:hover {
 
 #fourthSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
 	margin-left: -75%;
+}
+@media (max-width: 833px) {
+	.slider__footer {
+		flex-direction: column-reverse;
+	}
+	.slider__text {
+		width: 100%;
+	}
+	.slider__dots {
+		margin: 0 auto;
+	}
 }
