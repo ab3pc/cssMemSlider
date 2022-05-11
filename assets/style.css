@@ -37,13 +37,19 @@
 .slider__screen {
 	margin-bottom: 15px;
 	width: 400%;
-	height: 500px;
+	max-height: 500px;
 	display: flex;
 	border-radius: 9px;
 }
+.slider__screen__inner {
+	display: flex;
+	width:100%;
+}
+.slider__screen__inner div {
+	width:25%;
 
-.slider__screen img {
-	width: 25%;
+}
+.slider__screen__inner div img{
 	border-radius: 9px;
 }
 
@@ -116,15 +122,31 @@ label:hover {
 
 #secondSlide:checked~.slider__screen img:nth-child(1),
 #secondSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
-	margin-left: -25%;
+	margin-left: -100%;
 }
 
 #thirdSlide:checked~.slider__screen img:nth-child(1),
 #thirdSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
-	margin-left: -50%;
+	margin-left: -200%;
 }
 
 #fourthSlide:checked~.slider__screen img:nth-child(1),
+#fourthSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
+	margin-left: -300%;
+}
+#firstSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
+	margin-left: 0;
+}
+
+#secondSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
+	margin-left: -25%;
+}
+
+#thirdSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
+	margin-left: -50%;
+}
+
+
 #fourthSlide:checked~.slider__footer .slider__text .slider__text-inner .slider__text-screen p:nth-child(1) {
 	margin-left: -75%;
 }
